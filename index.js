@@ -19,7 +19,13 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 18;
 
+if(votingAge >= 18){
+  console.log('task 1 a:', true);
+}else{
+  console.log('task 1 a:', false);
+}
 
 
 /*
@@ -33,7 +39,16 @@ Do the following:
    HINT: no function required
 */
 
+let dog = 'Ada';
+let behaviour = 'bad'
 
+if(behaviour === 'bad'){
+  dog = 'Noa';
+}else{
+  dog = 'Ada';
+}
+
+console.log('task 1 b:', dog);
 
 
 
@@ -47,7 +62,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+const party = '1999';
+console.log('task 1 c:', Number(party));
 
 
 
@@ -60,11 +76,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
 
-
+console.log('task 1 d:', multiply(9, 9));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -76,11 +92,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
 
-
+console.log('task 2', dogYears(31));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -109,9 +125,27 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(age >= 1 && weight <= 5){
+    return weight * 0.05;
+  }else if(age >= 1 && weight >= 6 && weight <= 10){
+    return weight * 0.04;
+  }else if(age >= 1 && weight >= 11 && weight <= 15){
+    return weight * 0.03;
+  }else if(age >= 1 && weight > 15){
+    return weight * 0.02;
+  }else if(age < 1 && age >= 0.583){
+    return weight * 0.04;
+  }else if(age > 0.583 && age >= 0.333){
+    return weight * 0.05;
+  }else if(age < 0.333){
+    return weight * 0.10;
+  }else{
+    return 'please try again'
+  }
 }
+
+console.log('task 3', HungryDog(15, 1));
 
 
 
@@ -137,12 +171,31 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
 
+if(computer <= 0.34){
+  computer = 'rock';
+}else if(computer <= 0.67){
+  computer = 'paper';
+}else if(computer > 0.67){
+  computer = 'scissors';
+
+}
 function game(user, computer){
-  /*add your code here*/
+}
+if(user === computer){
+  return 'its a tie';
+}else if(user === 'rock' && computer === 'scissors'){
+  return 'you win';
+}else if(user === 'paper' && computer === 'rock'){
+  return 'you win';
+}else if(user === 'scissors' && computer === 'paper'){
+  return 'you win';
+}else{
+  return 'you lose';
 }
 
-
+console.log('task 4', game('paper, computer'));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
